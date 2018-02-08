@@ -11,14 +11,15 @@
 			uncomment the app.css line, and work exclusively in the src/scss files -->		
 		<!-- <link rel="stylesheet" href="dist/css/reset.css">
 		<link rel="stylesheet" href="dist/css/main.css"> -->
+		<link href="https://fonts.googleapis.com/css?family=Lato|Rammetto+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/app.css">
 		<link rel="stylesheet" href="dist/css/onepage-scroll.css">
 	</head>
 	<body>
 
-			<!-- <div id="loader">
-					<img src="dist/img/logo.png" alt="loading">
-				</div> -->
+			<div id="preloader">
+				</div>
 
 			<nav>
 					<header>
@@ -28,14 +29,14 @@
 						 
 						<div class="decades-pagination">
 							 <ul>
-								 <li> <a class="nav-home">home</a></li>
+								 <li class="up-arrow"> <i class="fa fa-angle-up fa-3x" aria-hidden="true"></i></li>
 								 <li> <a class="nav-sixties">60's</a></li>
 								 <li> <a class="nav-seventies">70's</a></li>
 								 <li> <a class="nav-eighties">80's</a></li>
 								 <li> <a class="nav-nineties">90's</a></li>
-								 <li> <a class="nav-2000s">2000's</a></li>
-								 <li> <a class="nav-2010s">2010's</a></li>
-								 <li> <a class="nav-end">End</a></li>
+								 <li> <a class="nav-2000s">00's</a></li>
+								 <li> <a class="nav-2010s">10's</a></li>
+								 <li class="down-arrow"> <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></li>
 								
 								 
 								</ul>
@@ -43,6 +44,25 @@
 						 
 					</header>
 				</nav>
+
+				<div class="fixed-black-specs">
+						<div class="paint-specs2 layer" data-depth="0.2"> 
+								<img src="dist/img/toppaint_full.png" alt="">
+						</div>
+						<div class="paint-specs layer" data-depth="0.2"> 
+								<img src="dist/img/bottompaint_full.png" alt="">
+						</div>
+						
+				</div>
+
+				<div class="home-middle">
+						<div class="middle-line">
+							
+						</div>
+						<div class="middle-continue">
+							<div class="downward-arrow"> <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></div>
+						</div>	
+					</div>
 
 				<div class="social-media">	
 					<ul>
@@ -52,32 +72,33 @@
 					</ul>
 				</div>
 
+				<div class="timeline-logo">
+			
+				</div>
+
 		
 			<div class="main">
 				<section id="page1">
 					<div class="page1-content">
 						<div class="home-left">
 							<ul class="contain" id="scene" >
-								<!-- <li class="paint-specs2 layer" data-depth="0.2"> 
-										<img src="dist/img/toppaint_full.png" alt="">
-									</li> -->
-								<!-- <div class="twiggy-pic">
-									<img src="" alt="">
-								</div> -->
-								
 								<li class="black-leaf-left layer" data-depth="0.4">
 										<img src="dist/img/blackleaf_left.png" alt="">
 								</li>
 								<li class="white-leaf-top-left layer" data-depth="0.6">
 									<img src="dist/img/whiteleaf_left.png" alt="">
 								</li>
-								<li class="paint-specs layer"; data-depth="0.2"> 
-										<img src="dist/img/bottompaint_full.png" alt="">
-									</li>
-
-
+								
 							</ul>
+
+							<div class="twiggy-home-section">
+								
+										<img class="img-blob" src="dist/img/blob.svg" alt="">
+										<img class="img-twiggy"src="dist/img/twiggy.png" alt="">
+							</div>
+				
 						</div>
+
 						<div class="home-middle">
 							<div class="middle-line">
 								
@@ -87,38 +108,375 @@
 								<div class="downward-arrow"> <i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></div>
 							</div>	
 						</div>
+
 						<div class="home-right">
-							<div class="contain">
-								<div class="black-corner" data-depth="0.2">
-										<img src="dist/img/black_corner.png" alt="">
-								</div>
-								<div class="black-bottom-leaf" data-depth="0.2">
-										<img src="dist/img/blackleaf_bottomright.png" alt="">
-								</div>
-								<div class="black-bottom-leaf2" data-depth="0.2">
-										<img src="dist/img/blackleaf_bottomright2.png" alt="">
-								</div>
-								<div class="presented">
-									<div id="home-dash"></div>
-									<p> presented by</p>
-									<div class="vogue-img">
-											<img src="dist/img/logo-grey-vogue.png" alt="">
+								<div class="fashion-vogue-logo">
+										<img src="dist/img/logo.png" alt="">
 									</div>
-									
+									<div class="yellow-feather-logo">
+											<img src="dist/img/yellow_leaf.png" alt="">
+										</div>
+							<div class="presented">
+								<div id="home-dash"></div>
+								<p> presented by</p>
+								<div class="vogue-img">
+									<img src="dist/img/logo-grey-vogue.png" alt="">
 								</div>
+							</div>
+							<ul class="contain-right-home" id="sceneRight">
+
+								<li class="white-right-leaf layer" data-depth="0.2">
+										<img src="dist/img/whiteleft_right.png" alt="">
+								</li>
+								
+								<li class="black-bottom-leaf layer" data-depth="0.4">
+										<img src="dist/img/blackleaf_bottomright.png" alt="">
+								</li>
+								<li class="black-bottom-leaf2 layer" data-depth="0.6">
+										<img src="dist/img/blackleaf_bottomright2.png" alt="">
+								</li>
+							</ul>
+							<div class="black-corner">
+									<img src="dist/img/black_corner.png" alt="">
+							</div>
+								
+									
+								
 
 								
+							
+						</div>
+					</div>
+				</section>
+
+				<section id="sixties">
+					<div class="page-content">
+						<div class="left sixties-left">
+							<div class="contain2">
+									<div class="mobile-only-blob">
+											<div class="orange-blob-mobile">
+													<img src="dist/img/blob-orange.png" alt="">
+											</div>	
+											<div class="yellow-blob-mobile">
+													<img src="dist/img/blob-yellow.png" alt="">
+											</div>
+										</div>
+								<div class="decade-container">
+									<h1>1960's</h1>
+									<h5> "In the sixties, fashion was about liberation. It was about setting women free." </h5>
+									<div class="decade-bar"></div>
+									<p>The 1960's were full of experimentation of culture and <span>Twiggy</span> was at the forefront of fashion.  </p>
+
+								</div>
+								<div class="right-orange-blob">
+										<img src="dist/img/blob-orange-right.png" alt="">
+								</div>
+									<!-- <div class="img-carousel-container" >
+											<div class="img-carousel">
+
+												<a href="#" >
+												  <img class="thumbnail1" src="https://zartnerds.files.wordpress.com/2015/10/thumbnail.png" alt="Sheer Perfection Tunic">
+												 </a>
+
+												<a href="#">
+												  <img class="thumbnail1" src="dist/img/space.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#">
+												  <img class="thumbnail1" src="dist/img/glasses.png"alt="Sheer Perfection Tunic">
+												</a>
+											
+												<a href="#">
+												  <img class="thumbnail1" src="dist/img/gogoboots.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#" >
+												  <img class="thumbnail1" src="https://zartnerds.files.wordpress.com/2015/10/thumbnail.png" alt="Sheer Perfection Tunic">
+												</a>
+											</div>
+									</div> -->
+									
+						
+							</div>
+						</div>
+						<div class="right sixties-right">
+							<div class="contain2">
+								<div class="img-container">
+									<div class="the-img">
+										<div class="orange-blob">
+												<img src="dist/img/blob-orange.png" alt="">
+										</div>	
+										<div class="yellow-blob">
+												<img src="dist/img/blob-yellow.png" alt="">
+										</div>
+										
+
+										<div class="changing-img">
+												<img src="dist/img/intro.png" alt="">
+										</div>
+										
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section id="sixties"></section>
-				<section id="seventies"></section>
-				<section id="eighties"></section>
-				<section id="nineties"></section>
-				<section id="2000s"></section>
-				<section id="2010s"></section>
-				<section id="call-to-action"></section>
+				<section id="seventies">
+						<div class="page-content seventies-content">
+								<div class="left seventies-left">
+									<div class="contain2">
+											<div class="mobile-only-blob">
+													<div class="green-blob-mobile">
+															<img src="dist/img/blob-green.png" alt="">
+													</div>	
+													<div class="mustard-blob-mobile">
+															<img src="dist/img/blob-mustard-right.png" alt="">
+													</div>
+												</div>
+										<div class="decade-container">
+											<h1>1970's</h1>
+											<h5> Name of Item </h5>
+											<div class="decade-bar"></div>
+											<p> Bacon ipsum dolor amet meatball brisket sausage burgdoggen pastrami pork chop salami rump t-bone pork belly. Strip steak porchetta pork chop andouille boudin shank landjaeger shoulder pancetta ground round salami rump pig.  </p>
+		
+										</div>
+										<div class="img-carousel">
+											
+
+										</div>
+										<div class="blob-mustard-left">
+												<img src="dist/img/blob-mustard-left.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="right seventies-right">
+									<div class="contain2">
+										<div class="img-container">
+											<div class="the-img">
+													<div class="green-blob">
+															<img src="dist/img/blob-green.png" alt="">
+													</div>	
+													<div class="mustard-blob">
+															<img src="dist/img/blob-mustard-right.png" alt="">
+													</div>
+													
+			
+													<div class="changing-img">
+															<img src="dist/img/70s_intro.png" alt="">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
+				<section id="eighties">
+						<div class="page-content eighties-content">
+								<div class="left eighties-left">
+									<div class="contain2">
+											<div class="mobile-only-blob">
+													<div class="orange-blob-mobile" id="blob-blue-right-mobile">
+															<img src="dist/img/blob-blue-right.png" alt="">
+													</div>	
+													<div class="yellow-blob-mobile" id="blob-hot-pink-mobile">
+															<img src="dist/img/blob-hot-pink.png" alt="">
+													</div>
+												</div>
+											
+										<div class="decade-container">
+											<h1>1980's</h1>
+											<h5> Name of Item </h5>
+											<div class="decade-bar"></div>
+											<p> Bacon ipsum dolor amet meatball brisket sausage burgdoggen pastrami pork chop salami rump t-bone pork belly. Strip steak porchetta pork chop andouille boudin shank landjaeger shoulder pancetta ground round salami rump pig.  </p>
+		
+										</div>
+										<div class="img-carousel">
+											
+
+										</div>
+										<div class="blob-mustard-left">
+												<img src="dist/img/blob-blue-left.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="right eighties-right">
+									<div class="contain2">
+										<div class="img-container">
+											<div class="the-img">
+													<div class="orange-blob" id="blob-blue-right">
+															<img src="dist/img/blob-blue-right.png" alt="">
+													</div>	
+													<div class="yellow-blob" id="blob-hot-pink">
+															<img src="dist/img/blob-hot-pink.png" alt="">
+													</div>
+													
+			
+													<div class="changing-img" id="eighties-intro-img">
+															<img src="dist/img/80s-intro.png" alt="">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
+
+				
+				<section id="nineties">
+						<div class="page-content nineties-content">
+								<div class="left nineties-left">
+									<div class="contain2">
+											<div class="mobile-only-blob">
+													<div class="green-blob-mobile" id="nineties-mobile-purp">
+															<img src="dist/img/blob-purp.png" alt="">
+													</div>	
+													<div class="mustard-blob-mobile">
+															<img src="dist/img/blob-teal.png" alt="">
+													</div>
+												</div>
+										<div class="decade-container">
+											<h1>1990's</h1>
+											<h5> “The '90s were extremely
+													diverse, almost like a
+													laboratory of the
+													new century.”
+													 </h5>
+											<div class="decade-bar"></div>
+											<p> Experimentation in fashion as a reflection of society and politics continued into the 90's, bringing about new trends.  </p>
+		
+										</div>
+										<div class="img-carousel">
+											
+
+										</div>
+										<div class="blob-mustard-left">
+												<img src="dist/img/blob-purp-left.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="right nineties-right">
+									<div class="contain2">
+										<div class="img-container">
+											<div class="the-img">
+													<div class="green-blob" id="nineties-right-purp">
+															<img src="dist/img/blob-purp.png" alt="">
+													</div>	
+													<div class="mustard-blob">
+															<img src="dist/img/blob-teal.png" alt="">
+													</div>
+													
+			
+													<div class="changing-img" id="nineties-img">
+															<img src="dist/img/90s-intro.png" alt="">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
+				<section id="2000s">
+						<div class="page-content zeros-content">
+								<div class="left zeros-left">
+									<div class="contain2">
+											<div class="mobile-only-blob">
+													<div class="orange-blob-mobile" id="">
+															<img src="dist/img/blob-00-right.png" alt="">
+													</div>	
+													<div class="yellow-blob-mobile" id="zeros-mobile-bottom">
+															<img src="dist/img/blob-00s-pink.png" alt="">
+													</div>
+												</div>
+										<div class="decade-container">
+											<h1>2000's</h1>
+											<h5> “Fashion is in the sky, in the street, fashion has to do with ideas, the way we live, what is happening.” </h5>
+											<div class="decade-bar"></div>
+											<p> The 2000's was represented by bold, saturated colors and exploration of eccentric trends that quickly came in and out of style.
+												</p>
+		
+										</div>
+										<div class="img-carousel">
+										
+											
+										</div>
+										<div class="blob-mustard-left">
+												<img src="dist/img/blob-00-left.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="right zeros-right">
+									<div class="contain2">
+										<div class="img-container">
+											<div class="the-img">
+													<div class="orange-blob" id="top-zeros">
+															<img src="dist/img/blob-00-right.png" alt="">
+													</div>	
+													<div class="yellow-blob" id="zeros-pink">
+															<img src="dist/img/blob-00s-pink.png" alt="">
+													</div>
+													
+			
+													<div class="changing-img" id="zeros-img">
+															<img src="dist/img/00s-intro.png" alt="">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
+				<section id="2010s">
+						<div class="page-content tens-content">
+								<div class="left tens-left">
+									<div class="contain2">
+										<div class="mobile-only-blob">
+												<div class="green-blob-mobile" id="nineties-right-purp">
+														<img src="dist/img/blob-babyb-top.png" alt="">
+												</div>	
+												<div class="mustard-blob-mobile">
+														<img src="dist/img/blob-light-pink.png" alt="">
+												</div>
+										</div>
+										<div class="decade-container">
+											<h1>2010's</h1>
+											<h5> “Fashion is part of our culture,
+													and it's about more than
+													just a pretty dress.”
+													 </h5>
+											<div class="decade-bar"></div>
+											<p> The 2010's have thus far been defined by athleisure, a revival of past period pieces and alternative fashions. </p>
+		
+										</div>
+										<div class="img-carousel">
+											
+
+										</div>
+										<div class="blob-mustard-left">
+												<img src="dist/img/blob-babyb-bottom.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="right tens-right">
+									<div class="contain2">
+										<div class="img-container">
+											<div class="the-img">
+													<div class="green-blob" id="nineties-right-purp">
+															<img src="dist/img/blob-babyb-top.png" alt="">
+													</div>	
+													<div class="mustard-blob">
+															<img src="dist/img/blob-light-pink.png" alt="">
+													</div>
+													
+			
+													<div class="changing-img" id="tens-intro-img">
+															<img src="dist/img/10s-intro.png" alt="">
+													</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
 			
 				
 				
@@ -130,11 +488,9 @@
 		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 		  crossorigin="anonymous"></script>
 		<script src="https://use.fontawesome.com/32ca864f38.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>	
 		<script src="dist/js/jquery.onepage-scroll.js"></script>
-
-		
 		<script src="dist/js/app.js"></script>
 
 		
