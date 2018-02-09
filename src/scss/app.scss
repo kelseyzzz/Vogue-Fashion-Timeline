@@ -13,7 +13,7 @@ TABLE OF CONTENTS:
 */
 
 @mixin for-desktop-up {
-	@media (min-width: 1200px) { @content; }
+	@media (min-width: 1000px) { @content; }
   }
 
 
@@ -233,6 +233,26 @@ nav {
 
 }
 
+.paint-specs-mobile {
+	transition: all 0.5s ease;
+	position: absolute;
+	padding-top: 19vh;
+	margin-left: -3rem;
+	max-width: 20vw;
+	
+	
+
+		img {
+			height: auto;
+			max-width: 100%;
+		}
+
+	@include for-desktop-up { 	
+		display: none;
+	}
+	 
+}
+
 
 
 .social-media {
@@ -241,6 +261,12 @@ nav {
 	justify-content: flex-end;
 	align-self: flex-end;
 	margin-right: 3rem;
+
+	@include for-phone-only {
+		 display: none;
+	}
+
+
 	
 
 	ul {
@@ -302,7 +328,7 @@ nav {
 		z-index: 9999;
 		width: 100%;
 
-		@include for-desktop-up { 
+		@include for-tablet-portrait-up { 
 			bottom: 4%;	
 		}
 
@@ -318,7 +344,7 @@ nav {
 			font-family: 'Montserrat', sans-serif;
 			// font-weight: 600;
 
-			@include for-desktop-up { 
+			@include for-tablet-portrait-up { 
 				padding: 1rem 2.5rem;	
 				font-size: .8rem;	
 			}
@@ -337,7 +363,7 @@ nav {
 
 		.downward-arrow {
 			margin-top: 1rem;
-			color: #7E56A8;
+			color: rgb(152, 124, 182);
 
 			i {
 				font-weight: 100;
@@ -367,6 +393,14 @@ nav {
 	}
 }
 
+.desktop-arrow-only {
+		display: none;
+	@include for-desktop-up {
+		display: block;
+   }
+
+}
+
 
 #page1 {
 
@@ -382,7 +416,7 @@ nav {
 			width: 100%;
 		
 			
-			@include for-desktop-up { 	
+			@include for-tablet-portrait-up { 	
 				position: static;
 				max-width: 50%;
 				flex: 0 1 50%;
@@ -392,14 +426,12 @@ nav {
 			.twiggy-home-section {
 				transition: all 0.2s ease;
 				background-color:  #E1E0E0;
-				
-
 				height: 45%;
 				width: 70%;
 				margin-left: 50%;
 				transform: translateX(-50%);
 
-				@include for-desktop-up { 
+				@include for-tablet-portrait-up { 
 					transform: translateX(0);
 					height: 90vh;
 					top: -54%;
@@ -417,7 +449,7 @@ nav {
 					height: 110%;
 					
 
-					@include for-desktop-up { 	
+					@include for-tablet-portrait-up { 	
 						top: 0;
 						height: auto;
 						width: 38vw;
@@ -433,7 +465,7 @@ nav {
 					bottom: 0;
 					width: 90%;
 
-					@include for-desktop-up { 	
+					@include for-tablet-portrait-up { 	
 						top: 6rem;
 						left: 0; 
 						transition: all 0.6s ease;
@@ -476,7 +508,7 @@ nav {
 						
 					}
 					
-					@include for-desktop-up { 	
+					@include for-tablet-portrait-up { 	
 						max-width: 71vh;
 					}
 					
@@ -494,7 +526,7 @@ nav {
 						max-width: 100%;
 					}
 
-					@include for-desktop-up { 	
+					@include for-tablet-portrait-up { 	
 						max-width: 71vh;
 					}
 				}
@@ -510,7 +542,7 @@ nav {
 			width: 100%;
 
 
-			@include for-desktop-up { 
+			@include for-tablet-portrait-up { 
 				position: static;	
 				max-width: 50%;
 				flex: 0 1 50%;
@@ -529,7 +561,7 @@ nav {
 					height: auto;
 				}
 
-				@include for-desktop-up { 	
+				@include for-tablet-portrait-up { 	
 					padding-top: 42vh;
 					padding-left: 7vw;
 					margin-left: 0;
@@ -546,7 +578,7 @@ nav {
 				right: 25%;
 				transition: all 0.5s ease;
 
-				@include for-desktop-up { 	
+				@include for-tablet-portrait-up { 	
 					padding-top: 41vh;
 					left: 52%;
 					padding-left: 29vw;
@@ -573,7 +605,7 @@ nav {
 					height: auto;
 				}
 
-				@include for-desktop-up { 	
+				@include for-tablet-portrait-up { 	
 					max-width: 71vh;
 				}
 			}
@@ -592,7 +624,7 @@ nav {
 				// 	padding-left: 40vw;
 				// }
 
-				@include for-desktop-up { 	
+				@include for-tablet-portrait-up { 	
 					margin-top: -73vh;
 					margin-left: 20vw;
 					padding-left: 0;
@@ -603,7 +635,7 @@ nav {
 				max-width: 0;
 				margin-left: 10vw;
 
-				@include for-desktop-up { 	
+				@include for-tablet-portrait-up { 	
 					max-width: 44vh;
 				}
 				
@@ -624,7 +656,7 @@ nav {
 					max-width: 0;
 					height: auto;
 
-					@include for-desktop-up { 	
+					@include for-tablet-portrait-up { 	
 						max-width: 204%;
 					}
 				}
@@ -643,7 +675,7 @@ nav {
 				justify-content: center;
 				display: none;
 
-				@include for-desktop-up { 	
+				@include for-tablet-portrait-up { 	
 					padding-top: 65vh;
 					padding-right: 10vw;
 					justify-content: flex-end;
@@ -683,8 +715,9 @@ nav {
 .mobile-only-blob {
 	position: absolute;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	display: flex;
+	
 	flex-direction: column;
 	opacity: 0.8;
 	@include for-desktop-up { 	
@@ -727,12 +760,13 @@ nav {
 
 	.mustard-blob-mobile {
 		position: absolute;
-		bottom: -.3rem;
+		bottom: -5px;
 		right: -5rem;
 		width: 70vw;
 		
 
 		img {
+			
 			max-width: 100%;
 			height: auto;
 		}
@@ -854,19 +888,19 @@ nav {
 				
 
 					.img-carousel-container {
-						 
-						
+						display: flex;
+						justify-content: flex-end;
 						width: 100%;
-						// position: relative;
+			
 
 
 						.img-carousel {
-							
-						
-							// position: relative;
 							display: flex;
+							justify-content: flex-end;
 							flex-direction: column;
-							width: 20vw;
+							width: 10vw;
+							opacity: 0.6;
+							filter: grayscale(100%);
 							
 							img {
 								max-width: 100%;
