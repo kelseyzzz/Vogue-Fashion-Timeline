@@ -7,10 +7,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- if you want to use transpiled SASS files, from the src folder, comment the reset and main.css lines, 
-			uncomment the app.css line, and work exclusively in the src/scss files -->		
-		<!-- <link rel="stylesheet" href="dist/css/reset.css">
-		<link rel="stylesheet" href="dist/css/main.css"> -->
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link href="https://fonts.googleapis.com/css?family=Lato|Rammetto+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/app.css">
@@ -45,7 +42,7 @@
 					</header>
 				</nav>
 
-				<div class="fixed-black-specs">
+				<div class="fixed-black-specs" id="scene2">
 						<div class="paint-specs2 layer" data-depth="0.2"> 
 								<img src="dist/img/toppaint_full.png" alt="">
 						</div>
@@ -80,19 +77,21 @@
 			<div class="main">
 				<section id="page1">
 					<div class="page1-content">
-						<div class="home-left">
+
 							<ul class="contain" id="scene" >
-								<div class="paint-specs-mobile layer" data-depth="0.2"> 
-									<img src="dist/img/bottompaint_full.png" alt="">
-								</div>
-								<li class="black-leaf-left layer" data-depth="0.4">
-										<img src="dist/img/blackleaf_left.png" alt="">
-								</li>
-								<li class="white-leaf-top-left layer" data-depth="0.6">
-									<img src="dist/img/whiteleaf_left.png" alt="">
-								</li>
-								
-							</ul>
+									<div class="paint-specs-mobile layer" data-depth="0.2"> 
+										<img src="dist/img/bottompaint_full.png" alt="">
+									</div>
+									<li class="black-leaf-left layer" data-depth="0.4">
+											<img src="dist/img/blackleaf_left.png" alt="">
+									</li>
+									<li class="white-leaf-top-left layer" data-depth="0.6">
+										<img src="dist/img/whiteleaf_left.png" alt="">
+									</li>
+									
+								</ul>
+						<div class="home-left">
+					
 
 							<div class="twiggy-home-section">
 								
@@ -175,22 +174,18 @@
 										<img src="dist/img/blob-orange-right.png" alt="">
 								</div>
 									<div class="img-carousel-container" >
-											<div class="img-carousel">
-
-												<!-- <a href="#" >
-												  <img class="thumbnail1" src="https://zartnerds.files.wordpress.com/2015/10/thumbnail.png" alt="Sheer Perfection Tunic">
-												 </a> -->
+											<div class="img-carousel sixties-carousel">
 
 												<a href="#">
-												  <img class="thumbnail1" src="dist/img/space.png" alt="Sheer Perfection Tunic">
+												  <img class="thumbnail1 top-thumb" data-filename="space_right" src="dist/img/space.png" alt="Sheer Perfection Tunic">
 												</a>
 										  
 												<a href="#">
-												  <img class="thumbnail1" src="dist/img/glasses.png"alt="Sheer Perfection Tunic">
+												  <img class="thumbnail1 middle-thumb" data-filename="glasses_right"src="dist/img/glasses.png"alt="Sheer Perfection Tunic">
 												</a>
 											
 												<a href="#">
-												  <img class="thumbnail1" src="dist/img/gogoboots.png" alt="Sheer Perfection Tunic">
+												  <img class="thumbnail1 bottom-thumb"  data-filename="gogo_right" src="dist/img/gogoboots.png" alt="Sheer Perfection Tunic">
 												</a>
 										  
 												
@@ -206,16 +201,16 @@
 							<div class="contain2">
 								<div class="img-container">
 									<div class="the-img">
-										<div class="orange-blob-mobile">
+										<div class="orange-blob">
 												<img src="dist/img/blob-orange.png" alt="">
 										</div>	
-										<div class="yellow-blob-mobile">
+										<div class="yellow-blob">
 												<img src="dist/img/blob-yellow.png" alt="">
 										</div>
 										
 
-										<div class="changing-img">
-												<img src="dist/img/intro.png" alt="">
+										<div class="changing-img ">
+												<img class="change-sixties-img" src="dist/img/intro.png" alt="">
 										</div>
 										
 									</div>
@@ -245,9 +240,24 @@
 													wanted to be and where fashion inspiration came from around the world. </p>
 		
 										</div>
-										<div class="img-carousel">
-											
+										<div class="img-carousel-container" >
+											<div class="img-carousel seventies-carousel">
 
+
+												<a href="#">
+												  <img class="thumbnail1 top-thumb" data-filename="ascot_right" src="dist/img/ascot.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#">
+												  <img class="thumbnail1 middle-thumb" data-filename="bellbottoms_right" src="dist/img/bellbottoms.png"alt="Sheer Perfection Tunic">
+												</a>
+											
+												<a href="#">
+												  <img class="thumbnail1 bottom-thumb" data-filename="platform_right" src="dist/img/platform.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												
+											</div>
 										</div>
 										<div class="blob-mustard-left">
 												<img src="dist/img/blob-mustard-left.png" alt="">
@@ -266,8 +276,8 @@
 													</div>
 													
 			
-													<div class="changing-img">
-															<img src="dist/img/70s_intro.png" alt="">
+													<div class="changing-img ">
+															<img class="change-seventies-img"src="dist/img/70s_intro.png" alt="">
 													</div>
 											</div>
 										</div>
@@ -298,9 +308,24 @@
 											<p> The 80s brought rockstar and pirate inspired fashion to the forefront, pushing with bright colors and eccentric textures.  </p>
 		
 										</div>
-										<div class="img-carousel">
-											
+										<div class="img-carousel-container" >
+											<div class="img-carousel 80s-carousel">
 
+
+												<a href="#">
+												  <img class="thumbnail1 top-thumb" data-filename="shoulderpads_right" src="dist/img/shoulderpads.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#">
+												  <img class="thumbnail1 middle-thumb" data-filename="legwarmers_right" src="dist/img/legwarmers.png"alt="Sheer Perfection Tunic">
+												</a>
+											
+												<a href="#">
+												  <img class="thumbnail1 bottom-thumb" data-filename="headband_right" src="dist/img/headband.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												
+											</div>
 										</div>
 										<div class="blob-mustard-left">
 												<img src="dist/img/blob-blue-left.png" alt="">
@@ -320,7 +345,7 @@
 													
 			
 													<div class="changing-img" id="eighties-intro-img">
-															<img src="dist/img/80s-intro.png" alt="">
+															<img class="change-80s-img" src="dist/img/80s-intro.png" alt="">
 													</div>
 											</div>
 										</div>
@@ -353,9 +378,24 @@
 											<p> Experimentation in fashion as a reflection of society and politics continued into the 90's, bringing about new trends.  </p>
 		
 										</div>
-										<div class="img-carousel">
-											
+										<div class="img-carousel-container" >
+											<div class="img-carousel 90s-carousel">
 
+
+												<a href="#">
+												  <img class="thumbnail1 top-thumb" data-filename="hoop_right" src="dist/img/hoop.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#">
+												  <img class="thumbnail1 middle-thumb" data-filename="denim_right" src="dist/img/denim.png"alt="Sheer Perfection Tunic">
+												</a>
+											
+												<a href="#">
+												  <img class="thumbnail1 bottom-thumb" data-filename="croptop_right" src="dist/img/crop_top.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												
+											</div>
 										</div>
 										<div class="blob-mustard-left">
 												<img src="dist/img/blob-purp-left.png" alt="">
@@ -375,7 +415,7 @@
 													
 			
 													<div class="changing-img" id="nineties-img">
-															<img src="dist/img/90s-intro.png" alt="">
+															<img class="change-90s-img" src="dist/img/90s-intro.png" alt="">
 													</div>
 											</div>
 										</div>
@@ -403,9 +443,24 @@
 												</p>
 		
 										</div>
-										<div class="img-carousel">
-										
+										<div class="img-carousel-container" >
+											<div class="img-carousel 00s-carousel">
+
+
+												<a href="#">
+												  <img class="thumbnail1 top-thumb" data-filename="beret_right" src="dist/img/beret.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#">
+												  <img class="thumbnail1 middle-thumb" data-filename="tracksuit_right" src="dist/img/tracksuit.png"alt="Sheer Perfection Tunic">
+												</a>
 											
+												<a href="#">
+												  <img class="thumbnail1 bottom-thumb" data-filename="bandana_right" src="dist/img/bandana.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												
+											</div>
 										</div>
 										<div class="blob-mustard-left">
 												<img src="dist/img/blob-00-left.png" alt="">
@@ -425,7 +480,7 @@
 													
 			
 													<div class="changing-img" id="zeros-img">
-															<img src="dist/img/00s-intro.png" alt="">
+															<img class="change-00s-img" src="dist/img/00s-intro.png" alt="">
 													</div>
 											</div>
 										</div>
@@ -455,9 +510,24 @@
 											<p> The 2010's have thus far been defined by athleisure, a revival of past period pieces and alternative fashions. </p>
 		
 										</div>
-										<div class="img-carousel">
-											
+										<div class="img-carousel-container" >
+											<div class="img-carousel 10s-carousel">
 
+
+												<a href="#">
+												  <img class="thumbnail1 top-thumb" data-filename="laceup_right" src="dist/img/laceup.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												<a href="#">
+												  <img class="thumbnail1 middle-thumb" data-filename="bomber_right" src="dist/img/bomber.png"alt="Sheer Perfection Tunic">
+												</a>
+											
+												<a href="#">
+												  <img class="thumbnail1 bottom-thumb last-thumb" data-filename="next_right" src="dist/img/next.png" alt="Sheer Perfection Tunic">
+												</a>
+										  
+												
+											</div>
 										</div>
 										<div class="blob-mustard-left">
 												<img src="dist/img/blob-babyb-bottom.png" alt="">
@@ -477,7 +547,7 @@
 													
 			
 													<div class="changing-img" id="tens-intro-img">
-															<img src="dist/img/10s-intro.png" alt="">
+															<img class="change-10s-img no-chang-img" src="dist/img/10s-intro.png" alt="">
 													</div>
 											</div>
 										</div>

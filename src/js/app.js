@@ -2,14 +2,14 @@
 
 (() => {
 	console.log("Hello World from app.js, transpiled and concatenated!");
-})();
 
+})();
 
 ///////////////////////////// preloader
 //// 
 
 $(window).on('load', function(){
-	$('#preloader').fadeOut('slow',function(){
+	$('#preloader').fadeOut('4000',function(){
 		$(this).remove();
 	});
 });
@@ -97,7 +97,7 @@ $(".up-arrow i").click(function() {
 
 
 
-TweenLite.to(".logo-square", 3, {autoAlpha:1, delay:2});
+TweenLite.to(".logo-square", 2, {autoAlpha:1, delay:1});
 // TweenLite.to(".social-media", 3, {autoAlpha:1, delay:2});
 
 
@@ -107,6 +107,9 @@ var scene = $('#scene').get(0);
 var parallaxInstance = new Parallax(scene,sceneRight, {
 	pointerEvents: true
 });
+
+
+
 
 var sceneRight = $('#sceneRight').get(0);
 var parallaxInstance = new Parallax(sceneRight, {
@@ -156,27 +159,125 @@ TweenMax.to(blackLeafRight, 2, {
 });
 
 
+
+
+
 ///////////////////  end of leaf enterance 
 
 
 /////////////////////////////////////////////////////////// the image carousel 
 
+// $(".last-thumb").hover(function() {
+
+// 	$( '.no-chang-img' ).attr("src","../dist/img/next_right.png");
+// 	}, function() {
+// });
 
 
 
-// $(function(){
-// 	var image_height = 0;
-// 	var gallery_offset = 0;
-// 	var image_count = $('img.thumbnail').length;
-// 	var click_count = 0;
-// 	var image_height = 0;
-// 	var last_images_count = 0;
 
 
-// 	jQuery('.thumbnail').each(function() {
-// 		$this.on(load),function(){ image_height = $(this).parent().outerHeight(); });
-// 		image_height = $(this).parent().outerHeight();
-// 	})
+
+	$('.sixties-carousel a img').hover(
+
+		function(){
+
+			console.log('neverworksonfirsttry');
+		
+			var linkIndex = $(this).attr("data-filename");
+			$(this).addClass('hover');
+			$('.change-sixties-img').attr('src','../dist/img/'+linkIndex+'.png');
+		},
+		function(){
+			$(this).removeClass('hover');
+			$('.change-sixties-img').attr('src','../dist/img/intro.png');
+		}
+	);
+	
+
+
+$('.seventies-carousel a img').hover(
+
+	function(){
+
+		console.log('neverworksonfirsttry');
+	
+		var linkIndex = $(this).attr("data-filename");
+		$(this).addClass('hover');
+		$('.change-seventies-img').attr('src','../dist/img/'+linkIndex+'.png');
+	},
+	function(){
+		$(this).removeClass('hover');
+		$('.change-seventies-img').attr('src','../dist/img/70s_intro.png');
+	}
+);
+
+
+$('.80s-carousel a img').hover(
+
+	function(){
+
+		console.log('neverworksonfirsttry');
+	
+		var linkIndex = $(this).attr("data-filename");
+		$(this).addClass('hover');
+		$('.change-80s-img').attr('src','../dist/img/'+linkIndex+'.png');
+	},
+	function(){
+		$(this).removeClass('hover');
+		$('.change-80s-img').attr('src','../dist/img/80s-intro.png');
+	}
+);
+
+$('.90s-carousel a img').hover(
+
+	function(){
+
+		console.log('neverworksonfirsttry');
+	
+		var linkIndex = $(this).attr("data-filename");
+		$(this).addClass('hover');
+		$('.change-90s-img').attr('src','../dist/img/'+linkIndex+'.png');
+	},
+	function(){
+		$(this).removeClass('hover');
+		$('.change-90s-img').attr('src','../dist/img/90s-intro.png');
+	}
+);
+
+$('.00s-carousel a img').hover(
+
+	function(){
+
+		console.log('neverworksonfirsttry');
+	
+		var linkIndex = $(this).attr("data-filename");
+		$(this).addClass('hover');
+		$('.change-00s-img').attr('src','../dist/img/'+linkIndex+'.png');
+	},
+	function(){
+		$(this).removeClass('hover');
+		$('.change-00s-img').attr('src','../dist/img/00s-intro.png');
+	}
+);
+
+$('.10s-carousel a img').hover(
+
+	function(){
+
+		console.log('neverworksonfirsttry');
+	
+		var linkIndex = $(this).attr("data-filename");
+		$(this).addClass('hover');
+		$('.change-10s-img').attr('src','../dist/img/'+linkIndex+'.png');
+	},
+	function(){
+		$(this).removeClass('hover');
+		$('.change-10s-img').attr('src','../dist/img/10s-intro.png');
+	}
+);
+
+
 
 
 
@@ -184,95 +285,6 @@ TweenMax.to(blackLeafRight, 2, {
 
 ///////////////////////////////////////// end of image carousel code ////////////////////
 
-$(function(){
-	var image_height = 0;
-	var gallery_offset = 0;
-	var image_count = $('img.thumbnail').length;
-	var click_count = 0;
-	var image_height = 0;
-	var last_images_count = 0;
-
-	$('.gallery-container a').scroll(function(){
-	  $('.gallery-container a').removeClass('active')
-		$(this).addClass('active');
-
-	});
-
-	jQuery('.thumbnail').each(function(){
-	  $(this).on('load', function(){ image_height = $(this).parent().outerHeight(); });
-	  image_height = $(this).parent().outerHeight();
-	})
-
-	// Disable arrows if the images count is 3 below
-	if(image_count <= 3) {
-		$('.product-more-pictures .up, .product-more-pictures .down').addClass('disabled')
-		click_count = 0;
-	}
-
-	// Set the first image as active
-	jQuery('.gallery-container img.thumbnail').first().click();
-	var thumb_active = jQuery('.gallery-container .active');
-
-	$('.gallery-container a').on('click', function() {
-		thumb_active = jQuery('.gallery-container .active');
-	});
-
-	$('.product-more-pictures .down').on('scroll', function (e) {
-		$('.product-more-pictures .up').removeClass('disabled')
-		if(thumb_active.nextAll(':lt(1)').length) {
-		  thumb_active.nextAll(':lt(1)').children().click()
-		  thumb_active = jQuery('.gallery-container .active');
-
-		} 
-
-		if( ! thumb_active.next().length) {
-		  $(this).addClass('disabled')
-		} else {
-		  $(this).removeClass('disabled');
-		}
-
-		if (click_count < image_count) {
-			click_count = click_count + 1;
-
-			update_gallery('down');
-		}
-
-
-
-	});
-
-	$('.product-more-pictures .up').on('click', function () {
-		$('.product-more-pictures .down').removeClass('disabled')
-		if(thumb_active.prevAll(':lt(1)').length) {
-		  thumb_active.prevAll(':lt(1)').children().click()
-		  thumb_active = jQuery('.gallery-container .active');
-		}
-
-		if( ! thumb_active.prev().length) {
-		  $(this).addClass('disabled')
-		} else {
-		  $(this).removeClass('disabled');
-		}
-
-		if (click_count > 0) {
-			click_count = click_count - 1;
-
-			update_gallery('up');
-
-		}
-	});
-
-	function update_gallery(direction) {         
-		gallery_offset = click_count * image_height;
-		last_images_count = thumb_active.nextAll().length;
-
-		$(".gallery-container").animate({
-		  'top': '-' + gallery_offset + 'px'
-		}, 800);
-
-	}
-
-});
 
 
 
